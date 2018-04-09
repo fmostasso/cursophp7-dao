@@ -27,9 +27,18 @@ require_once("config.php");
 
 //echo $usuario;
 
-$aluno = new Usuario("aluno", "@lun0");
+//Criando um novo usuário
+//$aluno = new Usuario("aluno", "@lun0");
+//$aluno->insert();
 
-$aluno->insert();
+//echo $aluno;
 
-echo $aluno;
+$usuario = new Usuario();
+
+$usuario->loadById(8);
+
+$usuario->update("Professor", "!@#$%¨&*");
+
+echo $usuario;
+
 ?>
